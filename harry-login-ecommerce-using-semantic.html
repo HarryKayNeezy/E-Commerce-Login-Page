@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta name="description" content="E-Commerce Login By Harry">
+  <meta name="author" content="Harry Kay">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title> Harry's E-Commerce </title>
+<!--   <link rel="stylesheet" type="text/css" href="semantic/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="semantic/components/container.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/header.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/image.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="semantic/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/form.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/input.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/button.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/list.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/message.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/icon.css">
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="semantic/components/form.js"></script>
+  <script src="semantic/components/transition.js"></script> -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+  <style type="text/css">
+    body {
+      background-color: #DADADA;
+      background-image: url("https://specials-images.forbesimg.com/imageserve/5d95d03767dd830006a295b6/960x0.jpg?fit=scale;");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    body > .grid {
+      height: 100%;
+    }
+/*    .image {
+      margin-top: -100px;
+    }*/
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <!-- <img src="https://s3-ap-southeast-1.amazonaws.com/images.marketing-interactive.com/wp-content/uploads/2016/02/E-commerce-700x420.jpg" class="ui medium circular image"> -->
+      <!-- <i id="cart" class="shopping cart icon"></i> -->
+      <div class="content">
+        Sign-in to your Account 
+      </div>
+    </h2>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button">Login</div>
+      </div>
+
+      <div class="ui error message"></div>
+
+       <div class="ui message">
+      Need help? <a href="#"> Forgot my password</a>
+    </div>
+
+    </form>
+
+    <div class="ui message">
+      New to us? <a href="#">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
